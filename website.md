@@ -53,3 +53,21 @@ static int[] reversed(int[] arr) {
 In the previous code, it creates a new array, but assigning the values in the new array to arr and return it. Since the new array is empty, the return value would also be empty, so it would not work. In my fixing, I instead assign the values of the input array reversely to the new array and return the new array. 
 
 <h2>Part two</h2>
+
+command `find`: </n>
+the basic syntax is `find [location] [option] [search term]` </n>
+Option 1: </n>
+`-name`
+this is used to find the files with its name containing the search term.
+
+```
+clairegao@Claires-MacBook-Pro ~ % find ./Downloads -name "cse12"
+clairegao@Claires-MacBook-Pro ~ % find ./Downloads -name "cse12-sp24-pa5-HashTable-starter-main"
+./Downloads/cse12-sp24-pa5-HashTable-starter-main
+```
+
+
+
+
+source: https://snapshooter.com/learn/linux/find#basic-syntax
+
