@@ -55,9 +55,11 @@ In the previous code, it creates a new array, but assigning the values in the ne
 <h2>Part two</h2>
 
 command `find`: </n>
-the basic syntax is `find [location] [option] [search term]` </n>
-Option 1: </n>
-`-name` 
+the basic syntax is `find [location] [option] [search term]` 
+</n>
+
+Option 1: `-name` 
+<br>
 this is used to find the files with its name containing the search term.
 
 ```
@@ -65,9 +67,12 @@ clairegao@Claires-MacBook-Pro ~ % find ./Downloads -name "cse12"
 clairegao@Claires-MacBook-Pro ~ % find ./Downloads -name "cse12-sp24-pa5-HashTable-starter-main"
 ./Downloads/cse12-sp24-pa5-HashTable-starter-main
 ```
+<br>
+<br>
+  
+Option 2: `-type`
+ <br>
 
-Option 2: </n>
-`-type`
 this is used to find the files with the specified type
 
 for example, this command finds the directory in chat-server 
@@ -99,9 +104,11 @@ the command finds the file with the name "update.sample" in chat-server
 clairegao@Claires-MacBook-Pro ~ % find ./chat-server -type f -name "update.sample" 
 ./chat-server/.git/hooks/update.sample
 ```
+ <br>
+<br>
+Option 3: `-atime`
+ <br>
 
-Option 3: </n>
-`-atime`
 this commands find the files that has been accessed with the given amount of period
 
 for example, this command find files in desktop that was last accessed more than 1 day ago.
@@ -138,8 +145,72 @@ clairegao@Claires-MacBook-Pro ~ % find ./Desktop -atime -1
 ./Desktop
 ./Desktop/Screenshot 2024-05-06 at 11.50.43 AM.png
 ```
+ <br>
+  <br>
+  
+Option 4: `maxdepth`
+<br>
+this is command find files but limit subdirectory traversal to 2 levels beneath the given directory.</n>
 
-Option 4: </n>
+For example, this command find files containing pdf, but limit subdirectory traversal to 1 level beneath download directory. 
+```
+clairegao@Claires-MacBook-Pro ~ % find ./Downloads -maxdepth 1 -name '*.pdf' 
+./Downloads/26a12f4e-53bf-4535-8aec-d762d5206f4e.pdf
+./Downloads/线上见面会 - Google Docs.pdf
+./Downloads/CSE15L-W24-Lecture01.pptx.pdf
+./Downloads/graphtheory textbook.pdf
+./Downloads/cse15l-lab-report2.pdf
+./Downloads/transgene.pdf
+./Downloads/cse15l-lab-reports1.pdf
+./Downloads/Resume.pdf
+./Downloads/academichistoryreviewpdf.pdf
+./Downloads/Lecture 16 Feb 16.pdf
+./Downloads/Photo.pdf
+./Downloads/prophets-of-the-hood-politics-and-poetics-in-hip-hop-9780822386155_compress.pdf
+./Downloads/Discussion9.pdf
+./Downloads/Computer simulations predict the impact of neuronal atrophy on the calcium dynamics in Huntington's disease 2023-4649.pdf
+```
+
+this command find files containing pdf, but limit subdirectory traversal to 2 levels beneath download directory
+```
+clairegao@Claires-MacBook-Pro ~ % find ./Downloads -maxdepth 2 -name '*.pdf'
+./Downloads/26a12f4e-53bf-4535-8aec-d762d5206f4e.pdf
+./Downloads/线上见面会 - Google Docs.pdf
+./Downloads/CSE15L-W24-Lecture01.pptx.pdf
+./Downloads/computional brain/1 introductin.pdf
+./Downloads/computional brain/3 computational overview.pdf
+./Downloads/computional brain/2 neuroscience overview.pdf
+./Downloads/graphtheory textbook.pdf
+./Downloads/cse15l-lab-report2.pdf
+./Downloads/transgene.pdf
+./Downloads/cse15l-lab-reports1.pdf
+./Downloads/Resume.pdf
+./Downloads/academichistoryreviewpdf.pdf
+./Downloads/Lecture 16 Feb 16.pdf
+./Downloads/Photo.pdf
+./Downloads/Hum4/SieyesThirdEstate.pdf
+./Downloads/Hum4/Lessing-Education.pdf
+./Downloads/Hum4/kant gw2.pdf
+./Downloads/Hum4/French rev Sieyes.pdf
+./Downloads/Hum4/Second Treatise Of Government, by John Locke.pdf
+./Downloads/Hum4/Schiller.pdf
+./Downloads/Hum4/kant grwk1.pdf
+./Downloads/Hum4/rousseau.pdf
+./Downloads/Hum4/Kant-Enlightenment.pdf
+./Downloads/Hum4/Schleiermacher1-2.pdf
+./Downloads/Hum4/summary.pdf
+./Downloads/Hum4/Immanuel_Kant_Groundwork_for_the_Metaphysics_of_Morals_1785.pdf
+./Downloads/Hum4/Rousseau_-_Jean-Jacques_Rousseau.pdf
+./Downloads/Hum4/Hum4-Syllabus%28S2023%29.pdf
+./Downloads/Hum4/novalis.pdf
+./Downloads/cse11-pa1-starter-main/Instructions for setting up Java on your own machine.pdf
+./Downloads/mus17/2024mus17week3.pdf
+./Downloads/mus17/2024mus17week2.pdf
+./Downloads/mus17/2024mus17week1.pdf
+./Downloads/prophets-of-the-hood-politics-and-poetics-in-hip-hop-9780822386155_compress.pdf
+./Downloads/Discussion9.pdf
+./Downloads/Computer simulations predict the impact of neuronal atrophy on the calcium dynamics in Huntington's disease 2023-4649.pdf
+```
 
 source: https://snapshooter.com/learn/linux/find#basic-syntax
 
