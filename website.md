@@ -212,5 +212,7 @@ clairegao@Claires-MacBook-Pro ~ % find ./Downloads -maxdepth 2 -name '*.pdf'
 ./Downloads/Computer simulations predict the impact of neuronal atrophy on the calcium dynamics in Huntington's disease 2023-4649.pdf
 ```
 
-source: https://snapshooter.com/learn/linux/find#basic-syntax
+source: 
+1. https://snapshooter.com/learn/linux/find#basic-syntax
+2. https://www.computerhope.com/unix/ufind.htm#examples
 
